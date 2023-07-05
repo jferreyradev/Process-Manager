@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "descripcion": "MENSUAL",
+        "procesos": [
+            { 
+            "id": 1,
+            "descripcion": "CAMBIO DE PERIODO",
+            "procesos": [
+                    { "id": 43, "descripcion": "Carga cargos actuales", "procedimiento": "WORKFLOW.PROCESOS.CARGA_CARGOACTUAL"
+                    },
+                    { "id": 44, "descripcion": "Carga datos Caja complementaria", "procedimiento": "WORKFLOW.PROCESOS.CARGA_CAJACOMPLEMENTARIA"
+                    },
+                    { "id": 42, "descripcion": "Genera Presentismo Docentes", "procedimiento": "WORKFLOW.PROCESOS.GENERAPRESENTISMODOC"
+                    },
+                    { "id": 57, "descripcion": "CARGA HISTORIA SALARIO", "procedimiento": "WORKFLOW.PROCESOS.CARGA_HISTORIA_SALARIO"
+                    },
+                    { "id": 58, "descripcion": "Carga acumulado SAC", "procedimiento": "WORKFLOW.PROCESOS.CARGA_ACUMULADO_SAC"
+                    },
+                    { "id": 51, "descripcion": "Cambio de periodo", "procedimiento": "WORKFLOW.PROCESOS.CAMBIOPERIODO"
+                    }
+                ]
+            },
+            {
+            "id": 5, 
+            "descripcion": "LISTADO DE CONTROL",
+            "procesos": [
+                    { "id": 1, "descripcion": "Control de presentismo", "procedimiento": "WORKFLOW.PROCESOS.CTRL_PRESENTISMO"
+                    },
+                    { "id": 96, "descripcion": "ACTUALIZA PRSENTISMO GRUPOS 1 2 5 6", "procedimiento": "WORKFLOW.PROCESOS.ACT_PRESENTISMO"
+                    },
+                    { "id": 8, "descripcion": "Ejecuta reglas de validación", "procedimiento": "WORKFLOW.PROCESOS.REGLAS"
+                    }
+                ]
+            },
+            {
+            "id": 6, 
+            "descripcion": "ARMADOS DE SUELDOS",
+            "procesos": [
+                    { "id": 8, "descripcion": "Ejecuta reglas de validación", "procedimiento": "WORKFLOW.PROCESOS.REGLAS"
+                    },
+                    { "id": 46, "descripcion": "Depura datos del cargo", "procedimiento": "WORKFLOW.PROCESOS.DEPURACIONDATOS"
+                    },
+                    { "id": 8, "descripcion": "Ejecuta reglas de validación", "procedimiento": "WORKFLOW.PROCESOS.REGLAS"
+                    },
+                    { "id": 45, "descripcion": "Tranforma datos", "procedimiento": "WORKFLOW.PROCESOS.TRANSFORMADOR"
+                    },
+                    { "id": 56, "descripcion": "Control de transformador", "procedimiento": "WORKFLOW.PROCESOS.CTRL_TRANSFORMADOR"
+                    },
+                    { "id": 18, "descripcion": "Liquidacion de haberes 1ra. Etapa", "procedimiento": "WORKFLOW.PROCESOS.LIQPRIMERAETAPA"
+                    }
+                ]
+            },
+            { 
+            "id": 19, "descripcion": "CONTRLOES PRE LEY",
+            "procesos": [
+                    { "id": 31, "descripcion": "Controla pensiones de Ley", "procedimiento": "WORKFLOW.CONTROLES.CTRL_PENSIONES"
+                    },
+                    { "id": 29, "descripcion": "Control LEY", "procedimiento": "WORKFLOW.CONTROLES.CONTROL_LEY"
+                    },
+                    { "id": 32, "descripcion": "Arregla historia del cargo", "procedimiento": "WORKFLOW.CONTROLES.ARREGLAHISTCARGO"
+                    },
+                    { "id": 33, "descripcion": "Arregla escalafon", "procedimiento": "WORKFLOW.CONTROLES.ARREGLAESCALAFON"
+                    },
+                    { "id": 34, "descripcion": "Arregla pension de ley", "procedimiento": "WORKFLOW.CONTROLES.ARREGLO_PENSION_LEY"
+                    },
+                    { "id": 35, "descripcion": "Codigos sin liquidar", "procedimiento": "WORKFLOW.CONTROLES.CTRL_CCSINLIQ"
+                    },
+                    { "id": 36, "descripcion": "Control de códigos duplicados", "procedimiento": "WORKFLOW.CONTROLES.CODIGOSDUPLICADOS"
+                    },
+                    { "id": 30, "descripcion": "Control Vacaciones", "procedimiento": "WORKFLOW.CONTROLES.CARGAVACACIONES"
+                    }
+                ]
+            },
+            { 
+            "id": 7, "descripcion": "GENERA LEY",
+            "procesos": [
+                    { "id": 8, "descripcion": "Ejecuta reglas de validación", "procedimiento": "WORKFLOW.PROCESOS.REGLAS"
+                    },
+                    { "id": 5, "descripcion": "Borrar preliquidacion", "procedimiento": "WORKFLOW.PROCESOS.BORRARPRELIQ"
+                    },
+                    { "id": 7, "descripcion": "Procesa codigos 95", "procedimiento": "WORKFLOW.PROCESOS.NOVCOD95"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    },
+                    { "id": 9, "descripcion": "Generacion de Ley", "procedimiento": "WORKFLOW.PROCESOS.GENERALEY"
+                    }
+                ]
+            },
+            { 
+            "id": 10, "descripcion": "LIQUIDACION MOMENTO 2",
+            "procesos": [
+                    { "id": 20, "descripcion": "Liquidacion de haberes 2da. Etapa", "procedimiento": "WORKFLOW.PROCESOS.LIQSEGUNDAETAPA"
+                    }
+                ]
+            },
+            { 
+            "id": 21, "descripcion": "LIQ 2DO MOMENTO - BLANQUEO",
+            "procesos": [
+                    { "id": 64, "descripcion": "Control DNI duplicados", "procedimiento": "WORKFLOW.CONTROLES.CTRL_DNI_DUPLICADOS"
+                    },
+                    { "id": 39, "descripcion": "Depura conceptos por persona", "procedimiento": "WORKFLOW.PROCESOS.DEPURACONCEPTOSPORPERSONA"
+                    },
+                    { "id": 40, "descripcion": "Agentes proximos a jub", "procedimiento": "WORKFLOW.PROCESOS.INSERTAAGENTESJUB"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            { 
+            "id": 20, "descripcion": "DOCAJUB Y CORRIGE 25019",
+            "procesos": [
+                    { "id": 21, "descripcion": "Calculo de codigos docentes", "procedimiento": "WORKFLOW.PROCESOS.CALCULACODDOC"
+                    },
+                    { "id": 93, "descripcion": "SUMA DE 600 PESOS PARA DOCENTES CON UN CARGO", "procedimiento": "WORKFLOW.PROCESOS.DOCENTES_UN_CARGO"
+                    },
+                    { "id": 37, "descripcion": "Blanqueo de ley", "procedimiento": "WORKFLOW.PROCESOS.NODOC_NOTICKET"
+                    },
+                    { "id": 92, "descripcion": "CALCULO REINTEGRO AUT SUP D76", "procedimiento": "WORKFLOW.PROCESOS.PROC_D76_REINTEGRO_AUT_SUP"
+                    },
+                    { "id": 70, "descripcion": "CONTROL DE AP JUB", "procedimiento": "WORKFLOW.CONTROLES.CTRL_APJUB"
+                    },
+                    { "id": 62, "descripcion": "DOC A JUB Y CORRIGE 25019", "procedimiento": "WORKFLOW.PROCESOS.DOCAJUB"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            { 
+            "id": 30, "descripcion": "INCREMENTO - GATILLO",
+            "procesos": [
+                    { "id": 94, "descripcion": "INCREMENTO DECRETO 2019", "procedimiento": "WORKFLOW.PROCESOS.INCREMENTO_D2019"
+                    },
+                    { "id": 95, "descripcion": "BLANQUEO GATILLO 1219", "procedimiento": "WORKFLOW.PROCESOS.BLANQUEO_GAT1219"
+                    },
+                    { "id": 97, "descripcion": "BLANQUEO DE DEUDA GATILLO 2019", "procedimiento": "WORKFLOW.PROCESOS.BLANQUEO_DEUDAGAT19"
+                    }
+                ]
+            },
+            {
+            "id": 22, "descripcion": "GENERACION IPSST Y CM",
+            "procesos": [
+                    { "id": 65, "descripcion": "LIQUIDACION CONCEPTOS IPSST", "procedimiento": "WORKFLOW.PROCESOS.IPSST_LIQCONCEPTOS"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    },
+                    { "id": 66, "descripcion": "CALCULO COMPLEMENTO AL MINIMO", "procedimiento": "WORKFLOW.PROCESOS.CALC_MINIMO"
+                    },
+                    { "id": 67, "descripcion": "RECALCULO DE RETENCIONES", "procedimiento": "WORKFLOW.PROCESOS.RECALC_RETENCIONES"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            {
+            "id": 23, "descripcion": "RECALCULO 401 Y ATEP",
+            "procesos": [
+                    { "id": 68, "descripcion": "RECALCULO SEGURO (COD 401)", "procedimiento": "WORKFLOW.PROCESOS.RECALC_SEGUROS_401"
+                    },
+                    { "id": 69, "descripcion": "RECALCULO ATEP", "procedimiento": "WORKFLOW.PROCESOS.RECALC_ATEP"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            { 
+            "id": 25, "descripcion": "RECALCULO RET 169 170 - TOPE RET",
+            "procesos": [
+                    { "id": 72, "descripcion": "RECALCULA CODIGOS 169 Y 170", "procedimiento": "WORKFLOW.PROCESOS.RECALC_COD169_170"
+                    },
+                    { "id": 73, "descripcion": "CONTROLA TOPE APORTE", "procedimiento": "WORKFLOW.PROCESOS.TOPE_APORTE"
+                    },
+                    { "id": 74, "descripcion": "RETENCIONES CAJA E IPVDU", "procedimiento": "WORKFLOW.PROCESOS.RET_CPA_IPVDU"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            { 
+            "id": 28, "descripcion": "PROCESO GANANCIA",
+            "procesos": [
+                    { "id": 82, "descripcion": "CALCULO DE GANANCIA", "procedimiento": "WORKFLOW.PROCESOS.GAN_CALCULA"
+                    },
+                    { "id": 83, "descripcion": "GENERA ARCHIVO GANANCIA", "procedimiento": "WORKFLOW.PROCESOS.GAN_GENERAARCHIVO"
+                    }
+                ]
+            },
+            { 
+            "id": 29, "descripcion": "FINAL DE LIQUIDACION EFECTIVO",
+            "procesos": [
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    },
+                    { "id": 84, "descripcion": "RECALCULA CTA PJ", "procedimiento": "WORKFLOW.PROCESOS.RECALC_CTAPJ"
+                    },
+                    { "id": 85, "descripcion": "RECALCULA PENSIONES", "procedimiento": "WORKFLOW.PROCESOS.RECALC_PENSIONES"
+                    },
+                    { "id": 86, "descripcion": "PENSIONES PORCENTUALES", "procedimiento": "WORKFLOW.PROCESOS.RECALC_PENPORC_EFECTIVO"
+                    },
+                    { "id": 87, "descripcion": "TICKET DOCENTES A EFECTIVO", "procedimiento": "WORKFLOW.PROCESOS.TICKETDOC"
+                    },
+                    { "id": 88, "descripcion": "DECRETO 40", "procedimiento": "WORKFLOW.PROCESOS.TOPE40"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    },
+                    { "id": 89, "descripcion": "CALCULA ART", "procedimiento": "WORKFLOW.PROCESOS.CALC_ART"
+                    },
+                    { "id": 90, "descripcion": "CALCULO DE APORTES PATRONALES", "procedimiento": "WORKFLOW.PROCESOS.CALC_APPAT"
+                    },
+                    { "id": 91, "descripcion": "CONTROL TOPE OS NAC", "procedimiento": "WORKFLOW.PROCESOS.CONTROL_TOPE_OSNAC"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            },
+            { 
+            "id": 24, "descripcion": "ELIMINA CODIGOS 401",
+            "procesos": [
+                    { "id": 71, "descripcion": "BORRAR 401", "procedimiento": "WORKFLOW.PROCESOS.BORRAR401"
+                    },
+                    { "id": 6, "descripcion": "Actualiza liquidacion", "procedimiento": "WORKFLOW.PROCESOS.ACTUALIZALIQ"
+                    }
+                ]
+            }
+        ]
+    }
+]
